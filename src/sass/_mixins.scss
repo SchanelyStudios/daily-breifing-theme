@@ -1,0 +1,35 @@
+@mixin bbox() {
+  box-sizing: border-box;
+}
+
+@mixin clearfix() {
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+@mixin col-pad() {
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+@mixin fill-padding() {
+  margin-left: -1 * $pad;
+  margin-right: -1 * $pad;
+}
+
+@mixin flex() {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@mixin type-space($baselines: 2, $top-pad: 0, $bottom-pad: 0, $top-margin: 0, $bottom-margin: 0) {
+  margin-top: $top-margin;
+  margin-bottom: $bottom-margin;
+  padding-top: $top-pad;
+  padding-bottom: $bottom-pad;
+  line-height: $baseline * $baselines;
+}

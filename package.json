@@ -1,0 +1,26 @@
+{
+  "name": "daily-briefing-theme",
+  "version": "1.0.0",
+  "description": "Wordpress theme for The Daily Briefing by Dr. Nick J. Pitts",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync": "browser-sync start -s \"src\" -f \"src/**/*.*\"",
+    "sass": "node-sass -w --include-path='src/sass' --source-map=true src/style.scss src/style.css",
+    "start": "npm-run-all -p sync sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchanelyStudios/daily-briefing-theme.git"
+  },
+  "author": "Phil Schanely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SchanelyStudios/daily-briefing-theme/issues"
+  },
+  "homepage": "https://github.com/SchanelyStudios/daily-briefing-theme#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "node-sass": "^4.8.3"
+  }
+}

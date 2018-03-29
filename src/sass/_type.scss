@@ -1,0 +1,118 @@
+a {
+  color: $color-accent;
+  text-decoration: none;
+}
+
+blockquote {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 30px;
+
+  cite {
+    display: block;
+  }
+
+  p {
+    max-width: 780px;
+  }
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-family: Georgia, serif;
+  text-align: center;
+  color: $color-primary;
+  font-weight: 600;
+  @include type-space(3, 0, 0, $baseline-3, $baseline-2);
+  background-image: url('images/db-logo.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  height: 120px;
+  text-indent: -9999px;
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  color: $color-primary;
+  font-weight: 600;
+  @include type-space(3, 5px, 7px);
+}
+
+h3 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: $color-primary;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.412rem;
+  @include type-space(2, 3px, 9px, $baseline-5, $baseline);
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 160px;
+    border-top: 1px solid $color-body;
+    opacity: 0.4;
+    position: absolute;
+    top: $baseline * -2;
+    left: 50%;
+    margin-left: -80px;
+  }
+
+  &:first-of-type {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+h4 {
+  font-size: 1.7rem;
+  color: $color-primary;
+  font-weight: 600;
+  @include type-space(2, 5px, 7px, $baseline-2);
+  @include clearfix;
+}
+
+h5 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-style: italic;
+  @include type-space(2, 5px, 7px, $baseline-2);
+}
+
+h6 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  @include type-space(2, 5px, 7px, $baseline);
+}
+
+li {
+  @include type-space(2, 0, 0);
+}
+
+mark {
+  background-color: fade-out($color-secondary, 0.75);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: $pad;
+}
+
+p {
+  @include type-space(2, 6px, 6px);
+  max-width: 840px;
+}

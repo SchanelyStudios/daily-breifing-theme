@@ -1,0 +1,57 @@
+.daily__highlights {
+  margin-left: 0;
+  margin-top: $baseline;
+  margin-bottom: $baseline-2;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  li {
+    text-align: center;
+    color: $color-secondary;
+    list-style: none;
+    font-style: italic;
+    font-size: 1.7rem;
+  }
+}
+
+.daily__x-day {
+  background-color: $color-secondary;
+  color: white;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  padding-top: $baseline + 6px;
+  padding-bottom: $baseline + 6px;
+  font-size: 1.7rem;
+  max-width: 100%;
+}
+
+.daily__quote {
+  padding-top: $baseline-2;
+  padding-bottom: $baseline-2;
+  background-color: $color-primary;
+  color: white;
+  h3 {
+    color: white;
+    font-size: 1.4rem;
+    @include type-space(2, 0, 0);
+  }
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.daily__num {
+  font-size: 5rem;
+  line-height: $baseline * 5;
+  font-style: normal;
+  float: left;
+  padding-right: $pad;
+  position: relative;
+  margin-top: -7px;
+}
+
+.nick-note {
+  font-style: italic;
+  color: $color-secondary;
+}
