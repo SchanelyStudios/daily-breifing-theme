@@ -39,7 +39,7 @@ h2 {
   text-align: center;
   color: $color-primary;
   font-weight: 600;
-  @include type-space(3, 5px, 7px);
+  @include type-space(3, 5px, 7px, 0, $baseline);
 }
 
 h3 {
@@ -114,5 +114,5 @@ ol, ul {
 
 p {
   @include type-space(2, 6px, 6px);
-  max-width: 840px;
+  max-width: 960px;
 }

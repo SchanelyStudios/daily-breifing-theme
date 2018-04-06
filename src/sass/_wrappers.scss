@@ -1,0 +1,56 @@
+.brand {
+  margin-bottom: $baseline;
+  @include bbox;
+  @include col-pad;
+  h1 {
+    opacity: $baseline * 3;
+    margin-top: $baseline * 3 - 1px;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 1.7rem;
+    color: $color-secondary;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+footer {
+  max-width: 420px;
+  margin: $baseline * 4 auto;
+  p {
+    text-align: center;
+  }
+}
+
+header {
+  margin-bottom: $baseline * 3;
+}
+
+.main--daily {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include media(960px) {
+  .brand {
+    width: 100%;
+  }
+  .main--home {
+    @include flex;
+  }
+}
+@include media(1200px) {
+  .brand {
+    width: 2/3 * 100%;
+  }
+  header {
+    @include flex;
+    align-items: flex-start;
+  }
+  .main--home {
+    padding: 0;
+    @include flex;
+  }
+}

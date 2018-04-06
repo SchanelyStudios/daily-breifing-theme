@@ -33,3 +33,9 @@
   padding-bottom: $bottom-pad;
   line-height: $baseline * $baselines;
 }
+
+@mixin media($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

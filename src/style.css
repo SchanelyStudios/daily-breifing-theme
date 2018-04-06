@@ -8,6 +8,7 @@ body {
   font-size: 1.4rem;
   line-height: 24px;
   font-family: 'Lato', sans-serif;
+  background-image: url("images/grid-mid-tablet.png");
   margin: 0;
   padding: 0; }
 
@@ -54,7 +55,7 @@ h2 {
   color: #283951;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 12px;
   padding-top: 5px;
   padding-bottom: 7px;
   line-height: 36px; }
@@ -145,7 +146,56 @@ p {
   padding-top: 6px;
   padding-bottom: 6px;
   line-height: 24px;
-  max-width: 840px; }
+  max-width: 960px; }
+
+.brand {
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .brand h1 {
+    margin-bottom: 0; }
+  .brand p {
+    font-size: 1.7rem;
+    color: #EF5225;
+    text-align: center;
+    max-width: 100%; }
+
+footer {
+  max-width: 420px;
+  margin: 48px auto; }
+  footer p {
+    text-align: center; }
+
+header {
+  margin-bottom: 36px; }
+
+.main--daily {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media screen and (min-width: 960px) {
+  .brand {
+    width: 100%; }
+  .main--home {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; } }
+
+@media screen and (min-width: 1200px) {
+  .brand {
+    width: 66.66667%; }
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .main--home {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; } }
 
 .daily__highlights {
   margin-left: 0;
@@ -202,43 +252,158 @@ p {
   color: #EF5225; }
 
 .daily-list {
-  margin-left: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between; }
-  .daily-list > li {
-    list-style: none;
-    margin-bottom: 24px;
-    width: 100%;
+  margin-top: 36px; }
+  .daily-list > ul {
+    margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: -20px;
+    margin-right: -20px; }
+    .daily-list > ul > li {
+      list-style: none;
+      margin-bottom: 24px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-right: 20px; }
+      @media screen and (min-width: 600px) {
+        .daily-list > ul > li {
+          width: 50%; } }
+      .daily-list > ul > li a {
+        display: block; }
+        .daily-list > ul > li a:hover h3 {
+          color: white;
+          background-color: #283951; }
+        .daily-list > ul > li a:hover .daily__highlights {
+          background-color: #EF5225; }
+          .daily-list > ul > li a:hover .daily__highlights li {
+            color: white; }
+  .daily-list h3 {
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px; }
-    @media screen and (min-width: 600px) {
-      .daily-list > li {
-        width: 50%; } }
-    .daily-list > li a {
-      display: block;
-      border: 1px solid #283951;
-      padding-left: 19px;
-      padding-right: 19px;
-      padding-top: 11px;
-      padding-bottom: 11px; }
-      .daily-list > li a:hover {
-        border-color: #127ABF; }
-  .daily-list h2 {
-    font-size: 2.2rem; }
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #283951;
+    padding-top: 12px;
+    height: 48px;
+    border: 2px solid #283951;
+    background-color: white; }
   .daily-list .faux-btn {
     text-align: center;
-    border: 1px solid #127ABF; }
-    .daily-list .faux-btn:hover {
-      background-color: #127ABF;
-      color: white; }
+    background-color: #127ABF;
+    color: white;
+    border: 2px solid #127ABF; }
   .daily-list .daily__highlights {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-top: 0;
-    margin-bottom: 12px; }
+    margin-bottom: 0;
+    background-color: white;
+    border: 2px solid #EF5225;
+    border-top: 0;
+    border-bottom: 0; }
     .daily-list .daily__highlights li {
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      color: #EF5225; }
+  @media screen and (min-width: 960px) {
+    .daily-list {
+      width: 66.66667%;
+      margin-top: 0;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .daily-list h2 {
+        text-align: left; } }
+  @media screen and (min-width: 1600px) {
+    .daily-list > ul > li {
+      width: 33.33333%; } }
+
+.about {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 960px) {
+    .about {
+      box-sizing: border-box;
+      width: 33.33333%;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .about h2 {
+        text-align: left; } }
+
+.about__pitts-pic {
+  max-width: 320px;
+  margin: 24px auto; }
+  .about__pitts-pic img {
+    border-radius: 50%;
+    max-width: 100%; }
+  .about__pitts-pic figcaption {
+    padding-top: 12px;
+    display: block;
+    font-style: italic;
+    color: #127ABF;
+    text-align: center; }
+
+.subscribe {
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin-top: 48px;
+  margin-bottom: 72px; }
+  .subscribe p {
+    text-align: center;
+    font-weight: 700;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #127ABF; }
+  .subscribe input {
+    box-sizing: border-box;
+    border: 2px solid #127ABF;
+    padding: 10px;
+    font-size: 1.7rem;
+    line-height: 24px;
+    display: block;
+    width: 100%; }
+  .subscribe button {
+    display: block;
+    border: none;
+    box-sizing: border-box;
+    background-color: #127ABF;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+    width: 100%;
+    line-height: 24px;
+    margin-top: 12px;
+    cursor: pointer; }
+  @media screen and (min-width: 600px) {
+    .subscribe {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto; }
+      .subscribe p {
+        width: 100%; }
+      .subscribe input {
+        width: 66.66667%; }
+      .subscribe button {
+        margin-top: 0;
+        width: 33.33333%; } }
+  @media screen and (min-width: 1200px) {
+    .subscribe {
+      max-width: 100%;
+      width: 33.33333%;
+      margin-top: 62px; }
+      .subscribe p {
+        text-align: left; } }
 
 /*# sourceMappingURL=style.css.map */

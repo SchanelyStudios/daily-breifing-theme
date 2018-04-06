@@ -1,0 +1,31 @@
+.about {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  @include media(960px) {
+    @include bbox;
+    width: 1/3 * 100%;
+    margin-left: 0;
+    margin-right: 0;
+    @include col-pad;
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.about__pitts-pic {
+  max-width: 320px;
+  margin: $baseline * 2 auto;
+  img {
+    border-radius: 50%;
+    max-width: 100%;
+  }
+  figcaption {
+    padding-top: $baseline;
+    display: block;
+    font-style: italic;
+    color: $color-accent;
+    text-align: center;
+  }
+}
