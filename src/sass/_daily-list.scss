@@ -2,6 +2,7 @@
   margin-top: $baseline * 3;
   & > ul {
     margin-left: 0;
+    padding: 0;
     @include flex;
     @include fill-padding;
     & > li {
@@ -15,18 +16,21 @@
       }
       a {
         display: block;
-        &:hover {
-          h3 {
+      }
+      &:hover a {
+        h3 {
+          color: white;
+          background-color: $color-primary;
+        }
+        .daily__highlights {
+          background-color: $color-secondary;
+          li {
             color: white;
-            background-color: $color-primary;
-          }
-          .daily__highlights {
-            background-color: $color-secondary;
-            li {
-              color: white;
-            }
           }
         }
+      }
+      & > p {
+        padding: 0;
       }
     }
   }
@@ -44,11 +48,13 @@
     background-color: white;
   }
 
-  .faux-btn {
+  .more-link {
+    display: block;
     text-align: center;
     background-color: $color-accent;
     color: white;
     border: 2px solid $color-accent;
+    padding: 4px 6px;
   }
 
   .daily__highlights {

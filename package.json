@@ -1,13 +1,15 @@
 {
   "name": "daily-briefing-theme",
   "version": "1.0.0",
-  "description": "Wordpress theme for The Daily Briefing by Dr. Nick J. Pitts",
+  "description": "Wordpress theme for The Daily Briefing by Dr. J. Nick Pitts",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sync": "browser-sync start -s \"src\" -f \"src/**/*.*\"",
     "sass": "node-sass -w --include-path='src/sass' --source-map=true src/style.scss src/style.css",
-    "start": "npm-run-all -p sync sass"
+    "prestart": "rm -rf ../wp-daily-briefing/wp-content/themes/daily-briefing-theme/",
+    "sync-theme": "cpx \"src/**/*\" \"../wp-daily-briefing/wp-content/themes/daily-briefing-theme/\" --watch",
+    "start": "npm-run-all -p sync sass sync-theme"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
   "homepage": "https://github.com/SchanelyStudios/daily-briefing-theme#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "node-sass": "^4.8.3"
+    "cpx": "^1.5.0",
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.3"
   }
 }

@@ -1,3 +1,12 @@
+/*
+ Theme Name: Daily Briefing Theme
+ Theme URI: http://thedailybriefing.net
+ Author: Phil Schanely
+ Author URI: http://philschanely.com
+ Description: Custom theme for Bereans at the Gate
+ Version: 1.0
+ Tags:
+ */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
 html {
   font-size: 10px;
@@ -154,12 +163,14 @@ p {
   padding-left: 20px;
   padding-right: 20px; }
   .brand h1 {
+    margin-top: 35px;
     margin-bottom: 0; }
   .brand p {
     font-size: 1.7rem;
     color: #EF5225;
     text-align: center;
-    max-width: 100%; }
+    max-width: 100%;
+    margin-bottom: 1px; }
 
 footer {
   max-width: 420px;
@@ -255,6 +266,7 @@ header {
   margin-top: 36px; }
   .daily-list > ul {
     margin-left: 0;
+    padding: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -272,13 +284,15 @@ header {
           width: 50%; } }
       .daily-list > ul > li a {
         display: block; }
-        .daily-list > ul > li a:hover h3 {
-          color: white;
-          background-color: #283951; }
-        .daily-list > ul > li a:hover .daily__highlights {
-          background-color: #EF5225; }
-          .daily-list > ul > li a:hover .daily__highlights li {
-            color: white; }
+      .daily-list > ul > li:hover a h3 {
+        color: white;
+        background-color: #283951; }
+      .daily-list > ul > li:hover a .daily__highlights {
+        background-color: #EF5225; }
+        .daily-list > ul > li:hover a .daily__highlights li {
+          color: white; }
+      .daily-list > ul > li > p {
+        padding: 0; }
   .daily-list h3 {
     box-sizing: border-box;
     text-transform: none;
@@ -290,11 +304,13 @@ header {
     height: 48px;
     border: 2px solid #283951;
     background-color: white; }
-  .daily-list .faux-btn {
+  .daily-list .more-link {
+    display: block;
     text-align: center;
     background-color: #127ABF;
     color: white;
-    border: 2px solid #127ABF; }
+    border: 2px solid #127ABF;
+    padding: 4px 6px; }
   .daily-list .daily__highlights {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -338,13 +354,14 @@ header {
         text-align: left; } }
 
 .about__pitts-pic {
-  max-width: 320px;
+  max-width: 324px;
   margin: 24px auto; }
   .about__pitts-pic img {
     border-radius: 50%;
     max-width: 100%; }
   .about__pitts-pic figcaption {
     padding-top: 12px;
+    padding-bottom: 3px;
     display: block;
     font-style: italic;
     color: #127ABF;
@@ -402,7 +419,7 @@ header {
     .subscribe {
       max-width: 100%;
       width: 33.33333%;
-      margin-top: 62px; }
+      margin-top: 60px; }
       .subscribe p {
         text-align: left; } }
 

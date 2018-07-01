@@ -15,7 +15,7 @@
 }
 
 .about__pitts-pic {
-  max-width: 320px;
+  max-width: 324px;
   margin: $baseline * 2 auto;
   img {
     border-radius: 50%;
@@ -23,6 +23,7 @@
   }
   figcaption {
     padding-top: $baseline;
+    padding-bottom: 3px; 
     display: block;
     font-style: italic;
     color: $color-accent;
